@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  db:
+    extends:
+      file: docker-services.yml
+      service: db
+
+  
+  repos:
+    extends:
+      file: docker-services.yml
+      service: repos
+    depends_on:
+      db:
+        condition: service_started

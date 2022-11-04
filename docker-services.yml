@@ -1,0 +1,23 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: "{$REPOS_DB}"
+      POSTGRES_USER: "RePOS"
+      POSTGRES_PASSWORD: "${REPOS_DB_PASSWORD}"
+
+  repos:
+    build: .
+    volumes:
+      - $PWD:/opt/RePOS
+    image: repos
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_HOST: db
+      REPOS_DB_PASSWORD: 
+      RAILS_ENV:
+    volumes:
+      - .:/opt/RePOS
