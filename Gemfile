@@ -76,3 +76,5 @@ gem "jsbundling-rails", "~> 1.0"
 gem "react-rails", "~> 2.6"
 
 gem "devise", "~> 4.8"
+
+gem "tailwindcss-rails", "~> 2.0"
