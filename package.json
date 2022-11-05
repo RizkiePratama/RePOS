@@ -1,0 +1,7 @@
+{
+  "name": "app",
+  "private": "true",
+  "devDependencies": {
+    "jest": "^29.2.2"
+  }
+}
