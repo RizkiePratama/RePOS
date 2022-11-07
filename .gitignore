@@ -25,6 +25,9 @@
 !/tmp/storage/
 !/tmp/storage/.keep
 
+# RSPEC
+spec/examples.txt
+
 /public/assets
 
 # Ignore master key for decrypting credentials and more.
